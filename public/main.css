@@ -443,3 +443,99 @@ form > :last-child {
   text-align: center;
   margin-top: 1rem;
 }
+
+/*************
+   AUTH + EXTRA FIELDS
+*************/
+.user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 1.5rem auto 0;
+}
+.user-bar + .task-form {
+  margin-top: 1rem;
+}
+.logout-btn {
+  padding: 0.25rem 0.75rem;
+}
+
+/* priority / category / due date row */
+.extra-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.extra-fields select,
+.extra-fields input {
+  flex: 1 1 150px;
+  width: auto;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--grey-300);
+  background: var(--grey-50);
+  font-family: var(--bodyFont);
+}
+
+/* login / register page */
+.auth-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.auth-fields input {
+  border-radius: var(--borderRadius);
+}
+.auth-fields .submit-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: var(--borderRadius);
+}
+.auth-switch {
+  text-align: center;
+  margin-top: 1rem;
+}
+.auth-switch a {
+  color: var(--primary-500);
+}
+
+/* task badges (.single-task prefix beats the .single-task span rule) */
+.task-meta {
+  display: block;
+  margin-top: 0.25rem;
+}
+.single-task .badge {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 0.25rem 0 0;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  border-radius: 1rem;
+  background: var(--grey-100);
+  color: var(--grey-1000);
+  text-transform: capitalize;
+}
+.single-task .priority-high {
+  background: #fecaca;
+}
+.single-task .priority-medium {
+  background: #fde68a;
+}
+.single-task .priority-low {
+  background: #bbf7d0;
+}
+
+
+.single-task-form select {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--grey-50);
+  border: 1px solid var(--grey-300);
+  font-family: var(--bodyFont);
+}

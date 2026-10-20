@@ -18,6 +18,11 @@
     <title>Task Manager || Final</title>
   </head>
   <body>
+    <div class="user-bar">
+      <span>Hi, <strong id="user-name"></strong></span>
+      <button type="button" class="btn logout-btn" id="logout-btn">logout</button>
+    </div>
+
     <form class="task-form">
       <h4>task manager</h4>
       <div class="form-control">
@@ -28,6 +33,15 @@
           placeholder="e.g. wash dishes"
         />
         <button type="submit" class="btn submit-btn">submit</button>
+      </div>
+      <div class="form-control extra-fields">
+        <select class="priority-input">
+          <option value="low">low</option>
+          <option value="medium" selected>medium</option>
+          <option value="high">high</option>
+        </select>
+        <input type="text" class="category-input" placeholder="category (e.g. college)" />
+        <input type="date" class="due-input" />
       </div>
       <div class="form-alert"></div>
     </form>
@@ -42,6 +56,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./auth.js"></script>
     <script src="./browser-app.js"></script>
   </body>
 </html>

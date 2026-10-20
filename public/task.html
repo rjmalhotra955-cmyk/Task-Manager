@@ -26,6 +26,22 @@
           <input type="text" name="name" class="task-edit-name" />
         </div>
         <div class="form-control">
+          <label for="priority">Priority</label>
+          <select name="priority" class="task-edit-priority">
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+            <option value="high">high</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="category">Category</label>
+          <input type="text" name="category" class="task-edit-category" />
+        </div>
+        <div class="form-control">
+          <label for="dueDate">Due date</label>
+          <input type="date" name="dueDate" class="task-edit-due" />
+        </div>
+        <div class="form-control">
           <label for="completed">completed</label>
           <input type="checkbox" name="completed" class="task-edit-completed" />
         </div>
@@ -42,6 +58,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <!-- js -->
+    <script src="./auth.js"></script>
     <script src="./edit-task.js"></script>
   </body>
 </html>
