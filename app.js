@@ -5,13 +5,16 @@ const connectDB = require('./db/connect');
 require('dotenv').config();
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
-
+const authRouter = require('./routes/auth')
+const authMiddleware = require('./middleware/auth')
 // middleware
 
 app.use(express.static('./public'));
 app.use(express.json());
 
 // routes
+app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/tasks', authMiddleware, tasks) 
 
 app.use('/api/v1/tasks', tasks);
 
